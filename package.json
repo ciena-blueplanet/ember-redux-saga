@@ -1,5 +1,5 @@
 {
-  "name": "ember-redux-saga",
+  "name": "ember-redux-saga-shim",
   "version": "0.0.1",
   "description": "redux-saga for Ember apps",
   "directories": {
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ciena-blueplanet/ember-redux-saga.git"
+    "url": "https://github.com/ember-redux/ember-redux-saga-shim.git"
   },
-  "homepage": "https://github.com/ciena-blueplanet/ember-redux-saga",
+  "homepage": "https://github.com/ember-redux/ember-redux-saga-shim",
   "engines": {
     "node": ">= 5.0.0"
   },
   "bugs": {
-    "url": "https://github.com/ciena-blueplanet/ember-redux-saga/issues"
+    "url": "https://github.com/ember-redux/ember-redux-saga-shim/issues"
   },
   "author": "Matthew Dahl (https://github.com/sandersky)",
   "license": "MIT",
