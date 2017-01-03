@@ -1,6 +1,6 @@
 {
   "name": "ember-redux-saga-shim",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "dependencies": {
     "acorn": {
       "version": "3.3.0",
