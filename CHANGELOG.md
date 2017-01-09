@@ -1,3 +1,8 @@
+# 0.0.12
+
+* **Removed** `.pullapprove.yml` since PullApprove is not used on this repo.
+* **Updated** [license](LICENSE) to attribute `ember-redux` instead of `Ciena`.
+
 # 0.0.11
 
 * **Updated** Travis config to publish as npm user `ember-redux`.
