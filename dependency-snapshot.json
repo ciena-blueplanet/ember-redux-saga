@@ -1,6 +1,6 @@
 {
   "name": "ember-redux-saga-shim",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "dependencies": {
     "abbrev": {
       "version": "1.0.9",
@@ -5797,9 +5797,9 @@
       }
     },
     "redux-saga": {
-      "version": "0.13.0",
-      "from": "redux-saga@0.13.0",
-      "resolved": "https://registry.npmjs.org/redux-saga/-/redux-saga-0.13.0.tgz",
+      "version": "0.14.2",
+      "from": "redux-saga@0.14.2",
+      "resolved": "https://registry.npmjs.org/redux-saga/-/redux-saga-0.14.2.tgz",
       "dev": true
     },
     "regenerate": {

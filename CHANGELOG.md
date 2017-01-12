@@ -1,3 +1,8 @@
+# 0.1.0
+
+* **Upgraded** `redux-saga` from version `0.13.0` to version `0.14.2`.
+
+
 # 0.0.13
 
 * **Fixed** blueprints directory so blueprints will run.
