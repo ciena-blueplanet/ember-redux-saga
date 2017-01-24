@@ -1,3 +1,9 @@
+# 0.1.1
+
+* **Upgraded** `redux-saga` to latest version.
+* **Upgraded** to test against Ember 2.11.
+
+
 # 0.1.0
 
 * **Upgraded** `redux-saga` from version `0.13.0` to version `0.14.2`.
