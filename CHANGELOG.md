@@ -1,3 +1,8 @@
+# 0.1.2
+
+* **Added** documentation about adding polyfill for generator functions.
+
+
 # 0.1.1
 
 * **Upgraded** `redux-saga` to latest version.
