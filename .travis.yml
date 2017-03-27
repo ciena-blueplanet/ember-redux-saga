@@ -4,7 +4,6 @@ language: node_js
 
 node_js:
 - '6.9.1'
-- 'stable'
 
 addons:
   apt:
@@ -22,23 +21,13 @@ cache:
 
 env:
   matrix:
-  - EMBER_TRY_SCENARIO=ember-1-12
   - EMBER_TRY_SCENARIO=ember-1-13
-  - EMBER_TRY_SCENARIO=ember-2-0
-  - EMBER_TRY_SCENARIO=ember-2-1
-  - EMBER_TRY_SCENARIO=ember-2-2
-  - EMBER_TRY_SCENARIO=ember-2-3
   - EMBER_TRY_SCENARIO=ember-2-4
-  - EMBER_TRY_SCENARIO=ember-2-5
-  - EMBER_TRY_SCENARIO=ember-2-6
-  - EMBER_TRY_SCENARIO=ember-2-7
   - EMBER_TRY_SCENARIO=ember-2-8
-  - EMBER_TRY_SCENARIO=ember-2-9
   - EMBER_TRY_SCENARIO=ember-2-10
   - EMBER_TRY_SCENARIO=default
   - EMBER_TRY_SCENARIO=ember-release
   - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
   global:
     - CXX=g++-4.8
     - secure: c/ULfiKP3KLTrf/KmyqneNLkYNyqleUsI+WIStclQWv7ywI0T+Pv6AbcwulZqpXKjtK8e8khbJmKt1ivHH6qDJF3L1DR2cYkqF7IyBqtnQv43bar6RRIlE8QRk7WxghjrNwqoclrgdA40HxhDLdBltt9r0RsUqJ7YaL/J64V4pehuRu3PAqk/cLOgZkCVUMfd8vfNN0h9/livtnKQnG1/JluQJpHPTUejZi9yMGPt/lsktuw5qXMX0CczQNP1uomxWsl32y5MEsb/tm8wt1B28MuUJ4mbXiRHKtrLa5F+Y07hPkDfuLk8HrTT5zW/sIdiYElGwqRLobKm+ujfUx9VXNLg7XaX+xreCKdzHLi2cDDhqQ5PN/LBqmIfchUtL9aZzQtm+BJzhum52RHZEtEk6aio1y1Gxiuu9aI5PWwrywC9LrJ7gBdXSM/I1p/dWJXWlRqEWTT7oRskbjmUEgYCVPAAqjITLHG98mv8jnYUWMKfRdBBtjJoNWyLTvTcF+NaBfmpC6icmwimuv0ohMZtOzYXeQAu7JsrqaIXGizgWD0J9LNN8B+01yhoqeH1ZgYRMZMqXLXyQDuafZSQjsqiL2qElcaDNKiYbHslYnwQFORPF5901sFWP5ImLsTygZ5d2IgmONSrY/0s4tpSALyF3Y/kVi1aGo3wqFLBykgYls=
@@ -46,7 +35,6 @@ matrix:
   fast_finish: true
   allow_failures:
   - env: EMBER_TRY_SCENARIO=ember-beta
-  - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
 - "export DISPLAY=:99.0"
