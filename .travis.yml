@@ -1,23 +1,18 @@
-sudo: required
-dist: trusty
+---
 language: node_js
-
 node_js:
-- '6.9.1'
+  - "6.9.1"
+
+sudo: false
+dist: trusty
 
 addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    - google-chrome
-    packages:
-    - google-chrome-stable
-    - g++-4.8
-  firefox: 'latest-esr'
+  firefox: "51.0"
 
 cache:
   directories:
-    - node_modules
+    - $HOME/.npm
+    - $HOME/.cache # includes bowers cache
 
 env:
   matrix:
@@ -28,29 +23,20 @@ env:
   - EMBER_TRY_SCENARIO=default
   - EMBER_TRY_SCENARIO=ember-release
   - EMBER_TRY_SCENARIO=ember-beta
-  global:
-    - CXX=g++-4.8
-    - secure: c/ULfiKP3KLTrf/KmyqneNLkYNyqleUsI+WIStclQWv7ywI0T+Pv6AbcwulZqpXKjtK8e8khbJmKt1ivHH6qDJF3L1DR2cYkqF7IyBqtnQv43bar6RRIlE8QRk7WxghjrNwqoclrgdA40HxhDLdBltt9r0RsUqJ7YaL/J64V4pehuRu3PAqk/cLOgZkCVUMfd8vfNN0h9/livtnKQnG1/JluQJpHPTUejZi9yMGPt/lsktuw5qXMX0CczQNP1uomxWsl32y5MEsb/tm8wt1B28MuUJ4mbXiRHKtrLa5F+Y07hPkDfuLk8HrTT5zW/sIdiYElGwqRLobKm+ujfUx9VXNLg7XaX+xreCKdzHLi2cDDhqQ5PN/LBqmIfchUtL9aZzQtm+BJzhum52RHZEtEk6aio1y1Gxiuu9aI5PWwrywC9LrJ7gBdXSM/I1p/dWJXWlRqEWTT7oRskbjmUEgYCVPAAqjITLHG98mv8jnYUWMKfRdBBtjJoNWyLTvTcF+NaBfmpC6icmwimuv0ohMZtOzYXeQAu7JsrqaIXGizgWD0J9LNN8B+01yhoqeH1ZgYRMZMqXLXyQDuafZSQjsqiL2qElcaDNKiYbHslYnwQFORPF5901sFWP5ImLsTygZ5d2IgmONSrY/0s4tpSALyF3Y/kVi1aGo3wqFLBykgYls=
-matrix:
-  fast_finish: true
-  allow_failures:
-  - env: EMBER_TRY_SCENARIO=ember-beta
 
 before_install:
-- "export DISPLAY=:99.0"
-- "sh -e /etc/init.d/xvfb start"
-- npm config set spin false
-- npm install -g coveralls pr-bumper
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "npm config set spin false"
+  - "npm install -g npm@^2"
 
 install:
-- $(npm root -g)/pr-bumper/.travis/maybe-install.sh
+  - npm install -g bower
+  - npm install
+  - bower install
 
 script:
-- $(npm root -g)/pr-bumper/.travis/maybe-test.sh
-- if [ $EMBER_TRY_SCENARIO == "default" ]; then $(npm root -g)/pr-bumper/.travis/maybe-bump-version.sh; fi
-
-after_success:
-- $(npm root -g)/pr-bumper/.travis/maybe-publish-coverage.sh
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
 
 deploy:
   provider: npm
@@ -63,7 +49,3 @@ deploy:
     condition: "$EMBER_TRY_SCENARIO = 'default'"
     node: 'stable'
     tags: true
-
-notifications:
-  slack:
-    secure: FeIdtSzYxdssJm4D1W9B4c++6otfZDEhGh/pUhyU28iSuUUHykq2T2s0Y4Unt6MbTVGtQEVTrtvF5hglcwCg+r0srmTTsjWIfsTyQ9rsMwMSRaf3ljl6JwIG3uNPFpUtlXFqCNedwjzIypn7jRTYEftUVL27WdxNE+6h8sWyDCrgmbXd1sGuNgpp6un0KyDGYl+kBPGmIsvLqR4n0QWN08rAg9c3RXABmFJEXmUqq4GoAMEv9De0eEeVTglawIMbP+KgVRxeEpM93/4xgmY/g9skt8UImgNLUkafpiF1g+JeSP51BK5w9j1Xh+7PSwdw5r7qpqVo9vND+/RZYShpFHNDL7NsixcqNPiY/AQvaqQqVVPn64FsU59+rxkML2PRecnYzjRw/RpD3e6fgREyz8rcQXjIiR4k73uWDJehr90zbmjj8NOlN5eyN3cMZMYth/1jXPhw6XbywbMTjX0H7/4Vtp/aJCeGh2NV4KICUkmpKjHxdF6MeIaXtpMIQCSxDuToCA75dWN88XKP+ylbFX4VQqgF+6VtxiEX5rcToo8pHwKZQc3+kvLvtsjEIdXAdLLBdKSza3TL/BxiIyS3DN/R8yJgpBokdxd1bfJLRYSdryAhqUtKN8qokiphaoOBGnKpWDlxF9h8Bu1SPv5ziWvpQ6p5bKemkNdwffSDjjw=
