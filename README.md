@@ -6,6 +6,7 @@
 
 ```bash
 ember install ember-redux-saga-shim
+ember install ember-maybe-import-regenerator
 ```
 
 ## Usage
