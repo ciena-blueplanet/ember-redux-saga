@@ -1,6 +1,6 @@
 {
   "name": "ember-redux-saga-shim",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "redux-saga for Ember apps",
   "directories": {
     "doc": "doc",
@@ -44,7 +44,7 @@
     "ember-symbol-observable": "0.1.2",
     "ember-test-utils": "^1.10.3",
     "loader.js": "^4.1.0",
-    "redux-saga": "0.14.3"
+    "redux-saga": "0.15.0"
   },
   "keywords": [
     "ember-addon",
