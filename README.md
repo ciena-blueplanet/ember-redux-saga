@@ -5,6 +5,7 @@
 ## Installation
 
 ```bash
+ember install ember-inflector@2.0.0
 ember install ember-redux-saga-shim
 ```
 
@@ -28,7 +29,7 @@ In order to use [generator functions](https://developer.mozilla.org/en-US/docs/W
       includePolyfills: true
     }
     ```
-    
+
     [Learn more…](https://github.com/babel/ember-cli-babel#polyfill)
 
 2. **Add a Polyfill** – Add a polyfill by simply running the following command:
@@ -36,7 +37,7 @@ In order to use [generator functions](https://developer.mozilla.org/en-US/docs/W
     ```bash
     ember install ember-maybe-import-regenerator
     ```
-    
+
     [Learn more…](https://github.com/machty/ember-maybe-import-regenerator)
 
 [ci-img]: https://img.shields.io/travis/ember-redux/ember-redux-saga-shim.svg "Travis CI Build Status"

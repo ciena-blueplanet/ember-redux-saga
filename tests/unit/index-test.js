@@ -1,6 +1,4 @@
-import {expect} from 'chai'
-import {describe, it} from 'mocha'
-
+import { test, module } from 'qunit';
 import createSagaMiddleware, {effects, utils} from 'redux-saga'
 
 const {
@@ -35,116 +33,114 @@ const {
   noop
 } = utils
 
-describe('redux-saga', function () {
-  it('default export', function () {
-    expect(typeof createSagaMiddleware).to.equal('function')
-  })
+module('Unit | Saga | Tests');
 
-  describe('effects', function () {
-    it('exports actionChannel method', function () {
-      expect(typeof actionChannel).to.equal('function')
-    })
+test('default export', function(assert) {
+  assert.equal(typeof createSagaMiddleware, 'function');
+});
 
-    it('exports apply method', function () {
-      expect(typeof apply).to.equal('function')
-    })
+test('exports actionChannel method', function(assert) {
+  assert.equal(typeof actionChannel, 'function');
+});
 
-    it('exports call method', function () {
-      expect(typeof call).to.equal('function')
-    })
+test('exports apply method', function(assert) {
+  assert.equal(typeof apply, 'function');
+});
 
-    it('exports cancel method', function () {
-      expect(typeof cancel).to.equal('function')
-    })
+test('exports call method', function(assert) {
+  assert.equal(typeof call, 'function');
+});
 
-    it('exports cancelled method', function () {
-      expect(typeof cancelled).to.equal('function')
-    })
+test('exports cancel method', function(assert) {
+  assert.equal(typeof cancel, 'function');
+});
 
-    it('exports cps method', function () {
-      expect(typeof cps).to.equal('function')
-    })
+test('exports cancelled method', function(assert) {
+  assert.equal(typeof cancelled, 'function');
+});
 
-    it('exports flush method', function () {
-      expect(typeof flush).to.equal('function')
-    })
+test('exports cps method', function(assert) {
+  assert.equal(typeof cps, 'function');
+});
 
-    it('exports fork method', function () {
-      expect(typeof fork).to.equal('function')
-    })
+test('exports flush method', function(assert) {
+  assert.equal(typeof flush, 'function');
+});
 
-    it('exports join method', function () {
-      expect(typeof join).to.equal('function')
-    })
+test('exports fork method', function(assert) {
+  assert.equal(typeof fork, 'function');
+});
 
-    it('exports put method', function () {
-      expect(typeof put).to.equal('function')
-    })
+test('exports join method', function(assert) {
+  assert.equal(typeof join, 'function');
+});
 
-    it('exports race method', function () {
-      expect(typeof race).to.equal('function')
-    })
+test('exports put method', function(assert) {
+  assert.equal(typeof put, 'function');
+});
 
-    it('exports select method', function () {
-      expect(typeof select).to.equal('function')
-    })
+test('exports race method', function(assert) {
+  assert.equal(typeof race, 'function');
+});
 
-    it('exports spawn method', function () {
-      expect(typeof spawn).to.equal('function')
-    })
+test('exports select method', function(assert) {
+  assert.equal(typeof select, 'function');
+});
 
-    it('exports take method', function () {
-      expect(typeof take).to.equal('function')
-    })
+test('exports spawn method', function(assert) {
+  assert.equal(typeof spawn, 'function');
+});
 
-    it('exports takeEvery method', function () {
-      expect(typeof takeEvery).to.equal('function')
-    })
+test('exports take method', function(assert) {
+  assert.equal(typeof take, 'function');
+});
 
-    it('exports takeLatest method', function () {
-      expect(typeof takeLatest).to.equal('function')
-    })
+test('exports takeEvery method', function(assert) {
+  assert.equal(typeof takeEvery, 'function');
+});
 
-    it('exports takem method', function () {
-      expect(typeof takem).to.equal('function')
-    })
+test('exports takeLatest method', function(assert) {
+  assert.equal(typeof takeLatest, 'function');
+});
 
-    it('exports throttle method', function () {
-      expect(typeof throttle).to.equal('function')
-    })
-  })
+test('exports takem method', function(assert) {
+  assert.equal(typeof takem, 'function');
+});
 
-  describe('utils', function () {
-    it('exports SAGA_ACTION method', function () {
-      expect(typeof SAGA_ACTION).to.equal('string')
-    })
+test('exports throttle method', function(assert) {
+  assert.equal(typeof throttle, 'function');
+});
 
-    it('exports TASK method', function () {
-      expect(typeof TASK).to.equal('string')
-    })
+test('exports SAGA_ACTION method', function(assert) {
+  // assert.equal(typeof SAGA_ACTION, 'string');
+  assert.equal(typeof SAGA_ACTION, 'symbol');
+});
 
-    it('exports arrayOfDeffered method', function () {
-      expect(typeof arrayOfDeffered).to.equal('function')
-    })
+test('exports TASK method', function(assert) {
+  // assert.equal(typeof TASK, 'string');
+  assert.equal(typeof TASK, 'symbol');
+});
 
-    it('exports asEffect method', function () {
-      expect(typeof asEffect).to.equal('object')
-    })
+test('exports arrayOfDeffered method', function(assert) {
+  assert.equal(typeof arrayOfDeffered, 'function');
+});
 
-    it('exports createMockTask method', function () {
-      expect(typeof createMockTask).to.equal('function')
-    })
+test('exports asEffect method', function(assert) {
+  assert.equal(typeof asEffect, 'object');
+});
 
-    it('exports deferred method', function () {
-      expect(typeof deferred).to.equal('function')
-    })
+test('exports createMockTask method', function(assert) {
+  assert.equal(typeof createMockTask, 'function');
+});
 
-    it('exports is method', function () {
-      expect(typeof is).to.equal('object')
-    })
+test('exports deferred method', function(assert) {
+  assert.equal(typeof deferred, 'function');
+});
 
-    it('exports noop method', function () {
-      expect(typeof noop).to.equal('function')
-    })
-  })
-})
+test('exports is method', function(assert) {
+  assert.equal(typeof is, 'object');
+});
+
+test('exports noop method', function(assert) {
+  assert.equal(typeof noop, 'function');
+});
