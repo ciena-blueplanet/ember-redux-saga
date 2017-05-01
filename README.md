@@ -5,7 +5,6 @@
 ## Installation
 
 ```bash
-ember install ember-inflector@2.0.0
 ember install ember-redux-saga-shim
 ```
 
