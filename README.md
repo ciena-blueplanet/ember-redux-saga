@@ -1,6 +1,6 @@
 # ember-redux-saga-shim
 
-[![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url] ![Ember][ember-img]
+[![Travis][ci-img]][ci-url] [![NPM][npm-img]][npm-url] ![Ember][ember-img]
 
 ## Installation
 
@@ -41,8 +41,6 @@ In order to use [generator functions](https://developer.mozilla.org/en-US/docs/W
 
 [ci-img]: https://img.shields.io/travis/ember-redux/ember-redux-saga-shim.svg "Travis CI Build Status"
 [ci-url]: https://travis-ci.org/ember-redux/ember-redux-saga-shim
-[cov-img]: https://img.shields.io/coveralls/ember-redux/ember-redux-saga-shim.svg "Coveralls Code Coverage"
-[cov-url]: https://coveralls.io/github/ember-redux/ember-redux-saga-shim
-[ember-img]: https://img.shields.io/badge/ember-1.12.2+-green.svg "Ember 1.12.2+"
+[ember-img]: https://img.shields.io/badge/ember-1.13.13+-green.svg "Ember 1.13.13+"
 [npm-img]: https://img.shields.io/npm/v/ember-redux-saga-shim.svg "NPM Version"
 [npm-url]: https://www.npmjs.com/package/ember-redux-saga-shim
