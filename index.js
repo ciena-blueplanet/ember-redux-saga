@@ -19,7 +19,7 @@ module.exports = {
       ]
     });
 
-    reduxSagaTree = esTranspiler(reduxSagaPath, {
+    reduxSagaTree = esTranspiler(reduxSagaTree, {
       plugins: [
         'transform-object-rest-spread'
       ]
