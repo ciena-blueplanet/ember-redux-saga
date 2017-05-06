@@ -112,13 +112,11 @@ test('exports throttle method', function(assert) {
 });
 
 test('exports SAGA_ACTION method', function(assert) {
-  // assert.equal(typeof SAGA_ACTION, 'string');
-  assert.equal(typeof SAGA_ACTION, 'symbol');
+  assert.equal(typeof SAGA_ACTION, 'string');
 });
 
 test('exports TASK method', function(assert) {
-  // assert.equal(typeof TASK, 'string');
-  assert.equal(typeof TASK, 'symbol');
+  assert.equal(typeof TASK, 'string');
 });
 
 test('exports arrayOfDeffered method', function(assert) {

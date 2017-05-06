@@ -4,7 +4,6 @@ const Funnel = require('broccoli-funnel')
 const mergeTrees = require('broccoli-merge-trees')
 const path = require('path')
 const replace = require('broccoli-replace')
-const esTranspiler = require('broccoli-babel-transpiler');
 
 module.exports = {
   name: 'redux-saga',
@@ -19,10 +18,14 @@ module.exports = {
       ]
     });
 
-    reduxSagaTree = esTranspiler(reduxSagaTree, {
-      plugins: [
-        'transform-object-rest-spread'
-      ]
+    let addon = this.addons.find(addon => addon.name === 'ember-cli-babel');
+    reduxSagaTree = addon.transpileTree(reduxSagaTree, {
+      babel: {
+        plugins: ['transform-object-rest-spread']
+      },
+      'ember-cli-babel': {
+        compileModules: false
+      }
     });
 
     reduxSagaTree = replace(reduxSagaTree, {
