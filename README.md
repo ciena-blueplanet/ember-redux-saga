@@ -25,7 +25,7 @@ In order to use [generator functions](https://developer.mozilla.org/en-US/docs/W
 
     ```js
     'ember-cli-babel': {
-      includePolyfills: true
+      includePolyfill: true
     }
     ```
 
