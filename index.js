@@ -9,7 +9,7 @@ module.exports = {
   name: 'redux-saga',
 
   treeForAddon (tree) {
-    const reduxSagaPath = path.dirname(require.resolve('redux-saga/src/index.js'));
+    const reduxSagaPath = path.dirname(require.resolve('redux-saga/es/index.js'));
     let reduxSagaTree = this.treeGenerator(reduxSagaPath);
 
     reduxSagaTree = new Funnel(reduxSagaTree, {

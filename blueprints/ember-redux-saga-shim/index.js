@@ -1,7 +1,7 @@
 module.exports = {
   afterInstall: function () {
     return this.addPackagesToProject([
-      {name: 'redux-saga', target: '0.15.3'}
+      {name: 'redux-saga', target: '0.16.0'}
     ])
   },
 
