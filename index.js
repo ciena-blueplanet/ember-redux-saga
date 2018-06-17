@@ -3,7 +3,7 @@
 const Funnel = require('broccoli-funnel')
 const mergeTrees = require('broccoli-merge-trees')
 const path = require('path')
-const replace = require('broccoli-replace')
+const replace = require('broccoli-string-replace')
 
 module.exports = {
   name: 'redux-saga',
