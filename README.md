@@ -2,6 +2,16 @@
 
 [![Travis][ci-img]][ci-url] [![NPM][npm-img]][npm-url] ![Ember][ember-img]
 
+## Deprecated
+
+With the release of ember-redux v5.0 you should uninstall this
+
+```bash
+npm uninstall ember-redux-saga-shim --save-dev
+ember install ember-auto-import
+npm install redux-saga --save-dev
+```
+
 ## Installation
 
 ```bash
